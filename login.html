@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>VR</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-highway.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="progetto1.css">
+  </head>
+  <body>
+
+      <div class="navigation w3-highway-blue w3-container">
+        <nav class="nav-container w3-padding-large">
+          <div class="logo">
+            <a href="index.html" >Facto<span>R</span></a>
+          </div>
+          <div class="mobile-button">
+            <span style="float: right;" onclick="toggleMobileNavigation()">&#9776;</span>
+          </div>
+          <div class="links">
+            <a href="index.html" >Home</a>
+            <a href="#personal" >Area Personale</a>           
+          </div>
+          <div id="mobile-sidenav" class="mobile-links w3-highway-blue">
+            <div class="mobile-logo" style="display: inline;">
+              <a href="#home" class="logo">Facto<span>R</span></a>
+              <span style="width: 100%;"></span>
+              <a href="javascript:void(0)" class="closebtn" onclick="toggleMobileNavigation()">&times;</a>
+            </div>
+            <a href="index.html" onclick="toggleMobileNavigation()">Home</a>
+            <a href="#personal" onclick="toggleMobileNavigation()">Area Personale</a>
+          </div>
+        </nav>
+      </div>
+
+      <div class="hero" id="home">
+        <div class="text container">
+           <div class="form w3-margin-top">
+          <div class="container w3-round-xlarge">
+            <form class="w3-highway-blue w3-padding-large w3-round-large" method="post" action="/login.php">
+              <label for="user">Username</label>
+              <input type="text" id="username" name="username" placeholder="Il tuo username" required>
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" placeholder="La tua password" required>
+              <button class="w3-metro-blue" type="submit" name="login">Login</button>
+              <p>Non sei ancora registrato? Vai a <a href="registrati.html" target="_blank">Registrati</a></p><br>
+            </form>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      
+
+      <div class=" w3-highway-blue w3-padding-large" id="footer">
+        <p class="w3-center logo">© 2025 - Facto<span>R</span> - All rights reserved</p>
+      </div>
+
+  <script>
+    function toggleMobileNavigation() {
+      const mobileNavigation = document.getElementById("mobile-sidenav");
+      mobileNavigation.classList.toggle('mobile-links-active');
+    }
+    function login() {
+ let u = document.getElementById("luser").value;
+let p = document.getElementById("lpassword").value;
+if (u === localStorage.getItem("user") && p === localStorage.getItem("pass")) {
+localStorage.setItem("loggedUser", u);
+window.open("personal.html");
+} else {
+alert("Credenziali errate!")
+}
+}
+</script>
+  </body>
+</html>

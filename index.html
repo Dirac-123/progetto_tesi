@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>VR</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-highway.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="progetto1.css">
+  </head>
+  <body>
+
+      <div class="navigation w3-highway-blue w3-container">
+        <nav class="nav-container w3-padding-large">
+          <div class="logo">
+            <a href="#home" >Facto<span>R</span></a>
+          </div>
+          <div class="mobile-button">
+            <span style="float: right;" onclick="toggleMobileNavigation()">&#9776;</span>
+          </div>
+          <div class="links">
+            <a href="#home" >Home</a>
+            <a href="login.html" >Area Personale</a>           
+          </div>
+          <div id="mobile-sidenav" class="mobile-links w3-highway-blue">
+            <div class="mobile-logo" style="display: inline;">
+              <a href="#home" class="logo">Facto<span>R</span></a>
+              <span style="width: 100%;"></span>
+              <a href="javascript:void(0)" class="closebtn" onclick="toggleMobileNavigation()">&times;</a>
+            </div>
+            <a href="#home" onclick="toggleMobileNavigation()">Home</a>
+            <a href="#personal" onclick="toggleMobileNavigation()">Area Personale</a>
+          </div>
+        </nav>
+      </div>
+
+      <div class="hero" id="home">
+        <div class="text container">
+          <p class="pre-title">Un metodo semplice ed efficace per un'azienda più sicura</p>
+          <h1 class="title"> Facto<span>R</span></h1>
+          <p class="post-title">Scopri la nostra guida alla valutazione dei rischi</p>
+          <a class="w3-button w3-round-xlarge w3-indigo w3-hover-blue w3-padding-large" href="http://localhost/varie/Guida.pdf" download="Fattore di rischio">Download</a> 
+        </div>
+      </div>
+
+      <div class="about container w3-padding-large" id="about">
+        <div class="text-one">
+          <h2>E ora mettiti alla prova</h2>
+          <p>Il nostro servizio ti offre la possibilità di consolidare le tue nuove conoscenze con esempi pratici di applicazione.
+            Potrai condurre una valutazione del rischio in prima persona e ricevere un feedback sui tuoi risultati.
+            Registrati e accedi all'area personale per sbloccare questa funzionalità!
+          </p>
+          <a class="w3-button w3-round-large w3-indigo w3-hover-blue" href="registrati.html">Registrati</a> 
+        </div>
+
+      
+      <div class="feedback container" id="fb">
+        <div class="feedback">
+          <h2>Lasciaci un feedback!</h2>
+          <p class="w3-xlarge">Sei rimasto soddisfatto dal nostro servizio? Inviaci una valutazione della tua esperienza</p>
+        </div>
+        <div class="form w3-margin-top">
+          <div class="container w3-round-xlarge">
+            <form class="w3-highway-blue w3-padding-large w3-round-large">
+              <label for="fname">Nome</label>
+              <input type="text" id="name" name="name" placeholder="Il tuo nome">
+
+              <label for="lname">Cognome</label>
+              <input type="text" id="surname" name="surname" placeholder="Il tuo cognome">
+
+              <label for="comment">Commento</label>
+              <textarea id="comment" name="comment" placeholder="Scrivi qui..." style="height:200px"></textarea>
+              
+              <p>Cliccando "Invia" accetti la nostra <a href="privacy-policy.html" target="_blank">privacy policy</a></p><br>
+              <input class="w3-metro-blue" type="submit" value="Invia">
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class=" w3-highway-blue w3-padding-large" id="footer">
+        <p class="w3-center logo">© 2025 - Facto<span>R</span> - All rights reserved</p>
+      </div>
+
+  <script>
+    function toggleMobileNavigation() {
+      const mobileNavigation = document.getElementById("mobile-sidenav");
+      mobileNavigation.classList.toggle('mobile-links-active');
+    }
+</script>
+  </body>
+</html>
